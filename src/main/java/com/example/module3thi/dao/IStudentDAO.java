@@ -15,4 +15,5 @@ public interface IStudentDAO<Student> {
 
     boolean updateStudent(Student student);
 
+    public List<Student>selectStudentByName(String name);
 }

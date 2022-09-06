@@ -186,14 +186,22 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-5">
-                        <h2>User <b>Management</b></h2>
+                        <h2>Student <b>Management</b></h2>
                     </div>
                     <div class="col-sm-7">
-                        <a href="#" class="btn btn-secondary"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
-                        <a href="#" class="btn btn-secondary"><i class="material-icons">&#xE24D;</i> <span>Export to Excel</span></a>
+                        <a href="/students?action=create" class="btn btn-secondary"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
+
                     </div>
+                    <div>
+                    <form action="/students?action=find" method="post">
+                        <input type="text" name="search" id="search" placeholder="country">
+                        <input type="submit" value="Search">
+                    </form>
                 </div>
+                </div>
+
             </div>
+            
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
@@ -215,8 +223,8 @@
                             <td>${student.address}</td>
 
                             <td>
-                                <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
+                                <a href="/students?action=edit&id=${student.id}" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
+                                <a href="/students?action=delete&id=${student.id}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
                             </td>
                 </tr>
 

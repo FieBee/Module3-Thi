@@ -23,6 +23,16 @@ public class Student {
     }
 
 
+
+    public Student(String name, String dateOfBirth, String address, String phoneNumber, String email, int classRoom) {
+        this.name = name;
+        this.dateOfBirth = LocalDate.parse(dateOfBirth);
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.classRoom = classRoom;
+    }
+
     public int getId() {
         return id;
     }
